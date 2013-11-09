@@ -1,0 +1,56 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+     xmlns:local="using:LinkedJazz"
+    x:Class="LinkedJazz.SpiralViewPage"
+    >
+    <!--<Page.DataContext>
+        <local:PeopleLinkedJazzViewModel/>
+    </Page.DataContext>-->
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualState x:Name="lalaVS">
+                    <Storyboard>
+                        <DoubleAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(LinkedJazzUC.Percent)" Storyboard.TargetName="lala4" RepeatBehavior="Forever">
+                            <EasingDoubleKeyFrame KeyTime="0" Value="0">
+                                <EasingDoubleKeyFrame.EasingFunction>
+                                    <PowerEase EasingMode="EaseInOut"/>
+                                </EasingDoubleKeyFrame.EasingFunction>
+                            </EasingDoubleKeyFrame>
+                            <EasingDoubleKeyFrame KeyTime="0:0:10" Value="100">
+                                <EasingDoubleKeyFrame.EasingFunction>
+                                    <PowerEase EasingMode="EaseInOut"/>
+                                </EasingDoubleKeyFrame.EasingFunction>
+                            </EasingDoubleKeyFrame>
+                        </DoubleAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+        <StackPanel>
+            <local:LinkedJazzUC x:Name="lala4" Margin="50,0" OrientToPath="False">
+                <local:LinkedJazzUC.Child>
+                    <Rectangle Width="15" Height="15" Fill="Bisque" Opacity="0.8"/>
+                </local:LinkedJazzUC.Child>
+
+                <!--<local:LinkedJazzUC.Child2>
+                    <Rectangle Width="15" Height="15" Fill="Bisque" Opacity="0.8"/>
+                </local:LinkedJazzUC.Child2>-->
+
+                <local:LinkedJazzUC.LinkedJazz>
+                    <Path  Data="M 384.77251 540.4738 C 342.92526 411.81518 579.7119 469.43507 549.70249 587.20981 564.03801 742.58802 379.18144 838.45514 244.50126 790.37432 39.009655 732.66678 -29.931998 462.53322 76.072315 291.01115 209.35835 49.727046 570.27762 21.515143 763.80861 204.28606 995.5923 403.59938 991.4045 794.13287 776.68848 1004.4434 543.67654 1251.3772 118.06826 1250.8501 -127.43811 1022.4634 -405.48004 783.8773 -442.05453 335.82322 -232.62788 41.548449 -24.476057 -274.61751 412.41407 -392.07989 759.05137 -253.08164 1126.7643 -118.46399 1364.215 277.19208 1332.6709 664.09473 1313.3034 1078.4981 998.81817 1451.0564 598.74772 1552.3586 190.66923 1668.7056 -273.51824 1508.3259 -528.58315 1170.9545 -825.14066 796.36313 -838.18803 235.45375 -574.28309 -159.92236 c 10.58336 -16.26821 21.57341 -32.27176 32.95502 -47.99184 M 386.8359 539.48216 C 478.63521 639.17083 238.97645 685.52401 217.15022 565.75732 139.18979 429.92962 267.67922 266.3792 410.26996 253.38861 621.42582 220.17964 797.0096 437.37198 772.04075 637.80364 751.7485 907.80007 445.39593 1084.2292 195.2399 1007.5613 -100.70629 931.3775 -268.29587 578.90661 -168.80151 295.884 -67.025896 -35.008945 328.01642 -220.77643 652.08837 -113.17049 1004.8374 -11.95805 1225.1317 380.76432 1157.2456 736.12515 1099.6565 1110.8875 750.85741 1400.1771 377.20912 1418.2742 -13.801865 1449.1559 -395.14099 1187.9793 -527.88731 822.51125 -683.34206 437.01325 -552.13172 -33.314591 -230.30343 -292.61338 92.727477 -568.71439 582.334 -616.63485 955.38934 -415.79614 c 426.36916 217.32802 672.33926 722.63227 597.04026 1192.78929 -2.8476 19.23024 -6.1759 38.38926 -9.9791 57.45351" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Stretch="Fill" Name="path3084" StrokeThickness="1" Stroke="#FF000000" StrokeEndLineCap="Flat" Margin="260,-100,-260,100" UseLayoutRounding="False">
+                    </Path>
+                </local:LinkedJazzUC.LinkedJazz>
+            </local:LinkedJazzUC>
+        </StackPanel>
+
+        <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Bottom" d:IsHidden="True"/>
+        <Button x:Name="playPauseAnB"  Content="Play/Pause Animations" VerticalAlignment="Top" Click="playPauseAnB_Click" Margin="200,0,0,0" />
+    </Grid>
+</Page>

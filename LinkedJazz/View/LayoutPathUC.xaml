@@ -1,0 +1,38 @@
+﻿<UserControl
+    x:Class="LinkedJazz.LinkedJazzUC"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+     xmlns:local="using:LinkedJazz"
+    d:DesignHeight="500"
+    d:DesignWidth="600">
+
+    <Grid >
+        <Grid x:Name="PathContainer" Opacity="0.2"></Grid>
+        <Grid x:Name="ChildsContainer"></Grid>
+        <StackPanel x:Name="diagnosticsSP" Visibility="Visible" Opacity="0.3">
+            <StackPanel Orientation="Horizontal" >
+                <TextBlock Text="Total Distance"></TextBlock>
+                <TextBlock x:Name="totalDistanceL" Text="0" Margin="5,0,0,0"></TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" >
+                <TextBlock Text="Local Distance"></TextBlock>
+                <TextBlock x:Name="localDistanceL" Text="0" Margin="5,0,0,0"></TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" >
+                <TextBlock Text="Ends at perc"></TextBlock>
+                <TextBlock x:Name="endPercL" Text="0" Margin="5,0,0,0"></TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" >
+                <TextBlock Text="Local Percent"></TextBlock>
+                <TextBlock x:Name="percentL" Text="0" Margin="5,0,0,0"></TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" >
+                <TextBlock Text="Degrees"></TextBlock>
+                <TextBlock x:Name="DegreesL" Text="0" Margin="5,0,0,0"></TextBlock>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

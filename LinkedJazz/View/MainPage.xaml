@@ -1,0 +1,31 @@
+﻿<Page
+    x:Class="LinkedJazz.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LinkedJazz"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+     
+    >
+    <Page.DataContext>
+        <local:PeopleLinkedJazzViewModel/>
+    </Page.DataContext>
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <ItemsControl Name="ScalingSpiral"  ManipulationMode="All" ManipulationDelta="ScalingManipulationDelta"  ItemsSource="{Binding ArtistsLinkedJazz}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Canvas>
+                        <Button Click="NavigateToArtist_Click"  Canvas.Left="{Binding XPosition,Mode=TwoWay}" Canvas.Top="{Binding YPosition,Mode=TwoWay}"   Width="100" Height="100" Content="{Binding Name}" >
+                            <Button.Background>
+                                <ImageBrush ImageSource="{Binding Image}"/>
+                            </Button.Background>
+                        </Button>
+                    </Canvas>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+
+    </Grid>
+</Page>
